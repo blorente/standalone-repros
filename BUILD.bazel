@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/blorente/standalone-repros
+gazelle(name = "gazelle")
+
+go_library(
+    name = "standalone-repros_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/blorente/standalone-repros",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//lib",
+        "//proto",
+        "@org_golang_google_grpc//:go_default_library",
+    ],
+)
+
+go_binary(
+    name = "standalone-repros",
+    embed = [":standalone-repros_lib"],
+    visibility = ["//visibility:public"],
+)
