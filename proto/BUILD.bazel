@@ -16,7 +16,6 @@ go_proto_library(
     visibility = ["//visibility:public"],
 )
 
-
 go_library(
     name = "proto",
     embed = [":server_go_proto"],
@@ -26,6 +25,6 @@ go_library(
 
 java_proto_library(
     name = "server_java_proto",
-    deps = [":server_proto"],
     visibility = ["//visibility:public"],
+    deps = [":server_proto"],
 )

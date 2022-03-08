@@ -2,4 +2,3 @@ load("@bazel_gazelle//:def.bzl", "gazelle")
 
 # gazelle:prefix github.com/blorente/standalone-repros
 gazelle(name = "gazelle")
-
