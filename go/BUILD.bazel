@@ -7,7 +7,7 @@ go_library(
     visibility = ["//visibility:private"],
     deps = [
         "//go/lib",
-        "//proto",
+        "//proto:go_proto",
         "@org_golang_google_grpc//:go_default_library",
     ],
 )
