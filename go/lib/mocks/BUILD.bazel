@@ -1,0 +1,9 @@
+load("@bazel_gomock//:gomock.bzl", "gomock")
+
+gomock(
+    name = "mock_lib",
+    out = "mock_lib_test.go",
+    interfaces = ["MyFun"],
+    library = "//lib:lib",
+    package = "main",
+)
