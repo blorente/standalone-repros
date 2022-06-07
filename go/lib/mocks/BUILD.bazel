@@ -5,11 +5,7 @@ gomock(
     name = "mock_lib",
     out = "mock_lib_test.go",
     interfaces = ["MyFun"],
-    library = "//lib",
-    package = "main",
-)
-
-go_test(
-    name = "mocks_test",
-    srcs = ["mock_lib_test.go"],
+    library = "//go/lib",
+    package = "mock_main",
+    visibility = ["//visibility:public"],
 )

@@ -9,7 +9,13 @@ go_library(
 
 go_test(
     name = "lib_test",
-    srcs = ["lib_test.go"],
+    srcs = [
+        "lib_test.go",
+        #keep
+        "//go/lib/mocks:mock_lib",
+    ],
     embed = [":lib"],
-    deps = ["@com_github_golang_mock//gomock:go_default_library"],
+    deps = [
+        "@com_github_golang_mock//gomock:go_default_library",
+    ],
 )
