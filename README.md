@@ -1,2 +1,3 @@
-# standalone-repros
-Different branches for different repros of different issues.
+# Gazelle rename illustrative example.
+
+Is there a way to tell gazelle to remove `//lib:badlib`?
