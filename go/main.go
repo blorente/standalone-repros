@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	lib.MyFun()
+	lib.AddToTwo()
 	fmt.Println("FOO:", os.Getenv("FOO"))
 }
 

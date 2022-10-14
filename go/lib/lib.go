@@ -1,3 +1,5 @@
 package lib
 
-func MyFun() {}
+func AddToTwo(num int) int {
+	return 2 + num
+}
