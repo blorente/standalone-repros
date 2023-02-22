@@ -9,8 +9,12 @@ import (
 )
 
 func main() {
-	lib.MyFun()
+	lib.AddToTwo()
 	fmt.Println("FOO:", os.Getenv("FOO"))
 }
 
-func serv(grpcSrv *grpc.Server, protoSrv *proto.FooServiceServer) {}
+func serv(grpcSrv *grpc.Server, protoSrv *proto.FooServiceServer) {
+	stuff := "stuff"
+	req := proto.HelloRequest{Name: &stuff}
+	req.GetName()
+}
